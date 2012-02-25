@@ -1,5 +1,8 @@
 == Summary
-Python script designed to run from an Apache CustomLog pipe configuration, which reads stdin (a log line) and sends data to graphite via statsd (so it's non-blocking UDP... in theory).
+Python script designed to run from an Apache CustomLog pipe configuration, which reads stdin (a log line) and sends data to graphite via statsd.
+
+Statsd is used, so it's, in theory, non-blocking UDP..
+This logging daemon uses ~5MB and has been tested with >500 req/s sustained, per server. 
 
 It logs: 1) response-time per URI, and 2) requests per second, per top-level URI and for an entire cluster of like-named servers.
 
