@@ -6,6 +6,8 @@ This logging daemon uses ~5MB and has been tested with >500 req/s sustained, per
 
 It logs: 1) response-time per URI, and 2) requests per second, per top-level URI and for an entire cluster of like-named servers.
 
+This is mostly for example sake: you should be logging your web server's view of request-time, in addition to application-level views. Furthermore, it's awesome to use graphite for req/s stats, because parsing web server logs at high scale is insanity. 
+
 We often found ourselves trying to determine why application-level response time metrics (sent from a tornado service to graphite) were great, but the actual request time from the user perspective was not as good. More data is better, so this script logs apache's view of the request-time... which is often drastically different from the application-level view.
 
 There is a lot of site-specific stuff in here (like cluster_name), but it's still useful and well-documented. Adjust to taste.
