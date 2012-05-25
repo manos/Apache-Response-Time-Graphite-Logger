@@ -1,3 +1,6 @@
+NOTE: see https://github.com/manos/varnish-statsd-graphite-logger for a more evolved example.
+It uses inotify to watch a file, rather than potentially blocking a web server in Logging.
+
 == Summary
 Python script designed to run from an Apache CustomLog pipe configuration, which reads stdin (a log line) and sends data to graphite via statsd.
 
