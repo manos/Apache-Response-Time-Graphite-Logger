@@ -1,3 +1,5 @@
+**Note**: You might want to look at [mod_statsd](https://github.com/jib/mod_statsd) which implements this as an Apache module.
+
 NOTE: see https://github.com/manos/varnish-statsd-graphite-logger for a more evolved example.
 It uses inotify to watch a file, rather than potentially blocking a web server in Logging.
 
